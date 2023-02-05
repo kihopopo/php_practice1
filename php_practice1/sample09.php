@@ -1,9 +1,19 @@
 <?php
 date_default_timezone_set('Asia/Tokyo');
 
-$time = strtotime('+33 day');
-echo $time . '<br>';
+$time = strtotime('+0 day');
+$day = date('n/j(D)', $time);
+echo $day . '<br>';
 
+$time = strtotime('+1 day');
+$day = date('n/j(D)', $time);
+echo $day . '<br>';
+
+$time = strtotime('+2 day');
+$day = date('n/j(D)', $time);
+echo $day . '<br>';
+
+$time = strtotime('+3 day');
 $day = date('n/j(D)', $time);
 echo $day . '<br>';
 ?>
