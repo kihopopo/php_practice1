@@ -1,21 +1,11 @@
 <?php
 date_default_timezone_set('Asia/Tokyo');
 
-$time = strtotime('+0 day');
-$day = date('n/j(D)', $time);
-echo $day . '<br>';
-
-$time = strtotime('+1 day');
-$day = date('n/j(D)', $time);
-echo $day . '<br>';
-
-$time = strtotime('+2 day');
-$day = date('n/j(D)', $time);
-echo $day . '<br>';
-
-$time = strtotime('+3 day');
-$day = date('n/j(D)', $time);
-echo $day . '<br>';
+for($i=0; $i<366; $i++):
+    $time = strtotime('+' . $i . ' day');
+    $day = date('n/j(D)', $time);
+    echo $day . '<br>';
+endfor;
 ?>
 
 <!-- timestampは、Unixタイムスタンプで現在以外の日時も指定可能 -->
